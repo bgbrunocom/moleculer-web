@@ -7,8 +7,28 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "Launch demo",
+			"name": "Launch Demo",
 			"program": "${workspaceRoot}/examples/dev/index.js",
+			"cwd": "${workspaceRoot}",
+			"env": {
+				"PORT": "3000"
+			}
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Demo Authorization",
+			"program": "${workspaceRoot}/examples/authorization/index.js",
+			"cwd": "${workspaceRoot}",
+			"env": {
+				"PORT": "3000"
+			}
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Demo Authentication",
+			"program": "${workspaceRoot}/examples/authentication/index.js",
 			"cwd": "${workspaceRoot}",
 			"env": {
 				"PORT": "3000"
@@ -19,12 +39,14 @@
 			"request": "launch",
 			"name": "Jest",
 			"program": "${workspaceRoot}/node_modules/jest-cli/bin/jest.js",
-			"args": ["--runInBand"],
+			"args": [
+				"--runInBand"
+			],
 			"cwd": "${workspaceRoot}",
 			"console": "internalConsole",
 			"runtimeArgs": [
-                "--nolazy"
-            ]
+				"--nolazy"
+			]
 		},
 		{
 			"name": "Attach by Process ID",
